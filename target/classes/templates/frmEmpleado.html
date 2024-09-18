@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">  
+<head>
+<meta charset="UTF-8" />
+<title>PacificWeb - PanaFoods</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+<link rel="shortcut icon" href="/images/icon.ico"></link>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+	
+<script src="https://kit.fontawesome.com/306152c8ba.js"
+	crossorigin="anonymous"></script>
+<script defer th:src="@{/js/index.js}"></script>
+</head>
+
+<style>
+    body{
+        background-image: url("/images/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;  
+        background-attachment: fixed;  
+    }
+</style> 
+<body>
+<header class="header">
+			<nav class="nav">
+				<img class="logo" th:src="@{/images/Logo.jpg}" align="top"></img>
+				<button class="nav-toggle">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<ul class="nav-menu">		
+					<li class="nav-menu-item"><a href="gestEmpleados"  
+						class="nav-menu-link nav-link">Gestión de Empleados</a></li> 
+					<li class="nav-menu-item"><a href="gestPedidos" 
+						class="nav-menu-link nav-link">Gestión de Pedidos</a></li> 
+						<li class="nav-menu-item"><a href="nosotros"  
+						class="nav-menu-link nav-link">Cerrar Sesión</a></li> 
+				</ul>
+			</nav>
+		</header>
+
+	<div class="form">
+  <div class="form-toggle"></div>
+  
+  
+  
+  <div class="form-panel one">
+  <div th:if=${param.exito}>
+					<div class="alert alert-info">Se ha registrado exitosamente al
+						empleado :)</div>
+				</div>
+    <div class="form-header">
+      <h1>Creación de Empleado</h1> 
+    </div>
+    <div class="form-content"> 
+     
+      <form th:action="@{/frmEmpleado}" th:object="${empleado}" method="post"> 	 			 					         
+        <div class="form-group">
+          <label for="dni">Dni:</label>
+          <input type="text" id="dni" th:field="*{dni}" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombres:</label> 
+          <input type="text" id="nombre" th:field="*{nombre}" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellidos:</label>
+          <input type="text" id="apellido" th:field="*{apellido}" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" th:field="*{email}" required="required"/>  
+        </div>
+        <div class="form-group">
+          <label for="edad">Edad:</label> 
+          <input type="text" id="edad" th:field="*{edad}" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="celular">Celular:</label> 
+          <input type="text" id="celular" th:field="*{celular}" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label> 
+          <input type="password" id="password" th:field="*{password}" name="password" required="required"/>
+        </div>
+        <div class="form-group">
+          <button type="submit">Ingresar</button>  
+        </div>
+         
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+
+<footer>
+		<div class="container__footer">
+			<div class="box__footer">
+				<div class="logo">
+					<img th:src="@{/images/logo.jpg}" alt="">
+				</div>
+			</div>
+			<div class="box__footer">
+				<h2>Información</h2>
+				<a>Dirección: Manuel Lecca Nro. 270</a> <a>Distrito: Chorrillos</a>
+				<a>Departamento: Lima, Perú</a> <a>Teléfono: (043)294450</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>PanaFoods</h2>
+				<a href="#">Nosotros</a> <a href="#">Productos</a> <a href="#">Sostenibilidad</a>
+				<a href="#">Contacto</a> <a href="#">PacificWeb</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>Desarrolladores</h2>
+
+				<a><i class="fa-brands fa-dev"> </i> Araujo V. Matias Nicolas</a> <a><i
+					class="fa-solid fa-code"> </i> Angulo U. Sebastian Cesar</a> <a><i
+					class="fa-solid fa-laptop-code"> </i> Ramirez U. Jorge Pedro</a> <a><i
+					class="fa-solid fa-terminal"> </i> Asin R. Nadin Misael</a>
+
+			</div>
+		</div>
+		<div class="box__copyright">
+			<hr>
+			<p>
+				Todos los derechos reservados © 2022 <b>PACIFIC NATURAL FOODS
+					S.A.C.</b>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>

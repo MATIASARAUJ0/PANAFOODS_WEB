@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Gestión de Empleados - PanaFoods</title> 
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+<link rel="shortcut icon" href="/images/icon.ico"></link>
+<script src="https://kit.fontawesome.com/306152c8ba.js"
+	crossorigin="anonymous"></script>
+<script defer th:src="@{/js/index.js}"></script>
+</head>
+
+<style>
+    body{
+        background-image: url("/images/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+        background-attachment: fixed;
+    }
+</style>
+
+<!-- Navbar -->
+<body>     
+	<div class="body">
+		<header class="header">
+			<nav class="nav">
+				<img class="logo" th:src="@{/images/Logo.jpg}" align="top"></img>
+				<button class="nav-toggle">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<ul class="nav-menu">		
+					<li class="nav-menu-item"><a href="frmEmpleado"  
+						class="nav-menu-link nav-link">Crear Empleado</a></li> 
+					<li class="nav-menu-item"><a href="gestPedidos" 
+						class="nav-menu-link nav-link">Gestión de Pedidos</a></li> 
+						<li class="nav-menu-item"><a href="nosotros"  
+						class="nav-menu-link nav-link">Cerrar Sesión</a></li> 
+				</ul>
+			</nav>
+		</header>
+  
+		<table class="tablita" border="1">
+		<caption class="captionn"><b>Gestión de Empleados</b></caption>
+			<thead>
+			
+				<tr>
+				    <th>ID</th>  
+					<th>DNI</th>
+					<th>Nombre</th> 
+                    <th>Apellido</th>
+                    <th>Email</th>
+					<th>Edad</th>
+					<th>Celular</th> 
+				</tr>
+			</thead> 
+			<tbody>
+				<tr th:each="empleado : ${empleados}">
+					<td align="center" th:text="${empleado.id}"></td> 
+					<td align="center" th:text="${empleado.dni}"></td>   
+                    <td align="center" th:text="${empleado.nombre}"></td> 
+                    <td align="center" th:text="${empleado.apellido}"></td>
+					<td align="center" th:text="${empleado.email}"></td> 
+					<td align="center" th:text="${empleado.edad}"></td>
+					<td align="center" th:text="${empleado.celular}"></td>  
+				</tr>
+			</tbody>
+		</table>
+		
+		<script>
+		function clicked(e){
+			if(!confirm('¿Seguro que desea eliminar el pedido?'))e.preventDefault();
+		}
+		</script>
+		
+	</div>
+		
+<!-- Footer -->
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+	<footer>
+		<div class="container__footer">
+			<div class="box__footer">
+				<div class="logo">
+					<img th:src="@{/images/logo.jpg}" alt="">
+				</div>
+				<!--  
+				<div class="terms">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Tenetur quam illum earum ut! Itaque sit neque quas dolor quasi
+						facilis quod impedit error, consectetur et ad blanditiis minima
+						reiciendis voluptate! Neque hic placeat consectetur iure. Vel
+						possimus rem quia! Voluptas dolorem alias quas veniam nemo,
+						dolores tempora voluptates explicabo? Magnam eveniet qui commodi
+						provident vero fugiat hic aliquam tempore voluptatum.</p>
+				</div> 
+				-->
+			</div>
+			
+			<div class="box__footer">
+				<h2>Información</h2>
+				<a>Dirección: Manuel Lecca Nro. 270</a> <a>Distrito: Chorrillos</a>
+				<a>Departamento: Lima, Perú</a> <a>Teléfono: (043)294450</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>PanaFoods</h2>
+				<a href="#">Nosotros</a> <a href="#">Productos</a> <a href="#">Sostenibilidad</a>
+				<a href="#">Contacto</a> <a href="#">PacificWeb</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>Desarrolladores</h2>
+
+				<a><i class="fa-brands fa-dev"> </i> Araujo V. Matias Nicolas</a> 
+				<a><i class="fa-solid fa-code"> </i> Angulo U. Sebastian Cesar</a> 
+				<a><i class="fa-solid fa-laptop-code"> </i>Ramirez U. Jorge Pedro </a> 
+				<a><i class="fa-solid fa-terminal"> </i> Asin R. Nadin Misael </a>
+				<a><i class="fa-brands fa-dev"> </i> Ortiz Y. Eduardo</a> 
+			</div>
+		</div>
+		<div class="box__copyright">
+			<hr>
+			<p> Todos los derechos reservados © 2022 <b>PACIFIC NATURAL FOODS.A.C.</b> </p>
+		</div>
+	</footer>
+	
+</body>
+</html> 

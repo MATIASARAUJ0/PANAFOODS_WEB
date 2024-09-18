@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>PacificWeb - PanaFoods</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+<link rel="shortcut icon" href="/images/icon.ico"></link>
+<script src="https://kit.fontawesome.com/306152c8ba.js"
+	crossorigin="anonymous"></script>
+<script defer th:src="@{/js/index.js}"></script>
+</head>
+
+<style>
+    body{
+        background-image: url("/images/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+        background-attachment: fixed; 
+    }
+</style>
+
+<!-- Navbar -->
+<body class="intra">
+		<header class="header">
+			<nav class="nav">
+				<img class="logo" th:src="@{/images/Logo.jpg}" align="top"></img>
+				<button class="nav-toggle">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<ul class="nav-menu">
+					<li class="nav-menu-item"><a href="nosotros"
+						class="nav-menu-link nav-link">Inicio</a></li>    
+					<li class="nav-menu-item"><a href="intranet"
+						class="nav-menu-link nav-link">Vista de Empleado</a></li> 
+				</ul>
+			</nav>
+		</header> 
+	
+<!-- Formulario -->
+<br><br><br>
+<div class="form">
+  <div class="form-toggle"></div>
+  
+  <div class="form-panel one">
+    <div class="form-header">
+      <h1>Inicio Sesión</h1> 
+    </div>
+    <div class="form-content">
+      <form th:action="@{/empleados}" method="post">    
+        <div class="form-group">
+          <label for="username">Documento de Identidad</label> 
+          <input type="text" id="username" name="username" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required="required"/>
+        </div> 
+        <div class="form-group">
+          <button type="submit">Ingresar</button>  
+        </div>
+        <p class="intra__p">
+        <br>Bienvenido Administrador! 
+        </p>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://codepen.io/andytran/pen/vLmRVp.js'></script><script  src="./script.js"></script> 		
+		<footer>
+		<div class="container__footer">
+			<div class="box__footer">
+				<div class="logo">
+					<img th:src="@{/images/logo.jpg}" alt="">
+				</div>
+			</div>
+			<div class="box__footer">
+				<h2>Información</h2>
+				<a>Dirección: Manuel Lecca Nro. 270</a> <a>Distrito: Chorrillos</a>
+				<a>Departamento: Lima, Perú</a> <a>Teléfono: (043)294450</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>PanaFoods</h2>
+				<a href="#">Nosotros</a> <a href="#">Productos</a> <a href="#">Sostenibilidad</a>
+				<a href="#">Contacto</a> <a href="#">PacificWeb</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>Desarrolladores</h2>
+
+				<a><i class="fa-brands fa-dev"> </i> Araujo V. Matias Nicolas</a> <a><i
+					class="fa-solid fa-code"> </i> Angulo U. Sebastian Cesar</a> <a><i
+					class="fa-solid fa-laptop-code"> </i> Ramirez U. Jorge Pedro</a> <a><i
+					class="fa-solid fa-terminal"> </i> Asin R. Nadin Misael</a>
+
+			</div>
+		</div>
+		<div class="box__copyright">
+			<hr>
+			<p>
+				Todos los derechos reservados © 2022 <b>PACIFIC NATURAL FOODS
+					S.A.C.</b>
+			</p>
+		</div>
+	</footer>
+</body>
+</html> 		

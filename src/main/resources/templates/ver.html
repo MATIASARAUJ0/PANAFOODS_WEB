@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+<body>
+	
+	<h1 class="card-header" th:text="${titulo}"></h1>
+	
+	<div class="container py-4">
+		<div class="card bg-light">
+			
+			<div class="card-body">
+			<h4 class="card.tittle">
+			</h4>	
+				<ul class="list-group">
+					<li class="list-group-item" th:text="${pedido.lugar}"></li>
+					<li class="list-group-item" th:text="${pedido.fechaEntrega}"></li>
+					<li class="list-group-item" th:text="${pedido.hora}"></li>
+					<li class="list-group-item" th:text="${pedido.time}"></li>
+				</ul>
+			<table class="table table-bordered table -spriped my-4">
+			   <thead class="thead-inverse">
+			       <tr>
+			          <th>Folio</th>
+			          <th>Descripción</th>
+			          <th>Fecha de Creación</th>
+			          <th>Total</th>
+			       </tr>
+			   </thead>
+			   
+			   <div th:if="${#lists.isEmpty(pedido.facturas)}"
+			   class="alert alert-info my-4" 
+			   th:text="'No hay facturas asignadas para el cliente N°'+ ${pedido.id}">
+			   
+			   </div>
+			   <tbody>
+			       <tr th:each="factura: ${pedido.facturas}">
+			          <td th:text="${factura.id}"></td>
+			          <td th:text="${factura.descripcion}"></td>
+			          <td th:text="${factura.fecha}"></td>
+			          <td th:text="${factura.total}"></td>
+			       
+			       </tr>
+			       
+			   </tbody>
+			</table>
+	
+			</div>
+		</div>
+	</div>
+	
+	<footer></footer> 
+</body>
+</html>

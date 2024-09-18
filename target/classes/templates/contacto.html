@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Contacto - Panafoods</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+<link rel="shortcut icon" href="/images/icon.ico"></link>
+<script src="https://kit.fontawesome.com/306152c8ba.js"
+	crossorigin="anonymous"></script>
+<script defer th:src="@{/js/index.js}"></script>
+</head>
+
+<style>
+    body{
+        background-image: url("/images/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+        background-attachment: fixed;
+    }
+</style>
+
+<body>
+	<div class="body">
+		<header class="header">
+			<nav class="nav">
+				<img class="logo" th:src="@{/images/Logo.jpg}" align="top"></img>
+				<button class="nav-toggle">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<ul class="nav-menu"> 
+					<li class="nav-menu-item"><a href="nosotros"
+						class="nav-menu-link nav-link">Nosotros</a></li>
+					<li class="nav-menu-item"><a href="productos"
+						class="nav-menu-link nav-link">Productos</a></li>
+					<li class="nav-menu-item"><a href="sostenibilidad"
+						class="nav-menu-link nav-link">Sostenibilidad</a></li>
+					<li class="nav-menu-item"><a href="contacto"
+						class="nav-menu-link nav-link nav-menu-link_active">Contacto</a></li>
+					<li class="nav-menu-item"><a href="intranet"
+						class="nav-menu-link nav-link">PacificWeb</a></li> 							
+				</ul>
+			</nav>
+		</header>
+
+		<section class="form_wrap">
+
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>Información<br><br>de Contacto</h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span> panafoods2022@hotmail.com</p>    
+                <p><span class="fa fa-mobile"></span> 0511-2513469</p>
+            </section>
+        </section>
+ 
+        <form action="https://formsubmit.co/panafoods2022@hotmail.com" method="post"class="form_contact">   
+            <h2>Envíanos un mensaje...</h2>  
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names" name="nombre" required>
+			<br>
+                <label for="phone">Celular *</label>
+                <input type="text" id="phone" name="telefono">
+			<br>
+                <label for="email">Correo Electrónico *</label>
+                <input type="text" id="email" name="correo" required>
+			<br>
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            
+                <input type="submit" value="Enviar Mensaje" id="btnSend">
+            </div>
+        </form>
+    </section>
+</div>
+	
+	
+<!-- Footer -->
+<br><br><br><br>
+	<footer>
+		<div class="container__footer">
+			<div class="box__footer">
+				<div class="logo">
+					<img th:src="@{/images/logo.jpg}" alt="">
+				</div>
+				<!--  
+				<div class="terms">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Tenetur quam illum earum ut! Itaque sit neque quas dolor quasi
+						facilis quod impedit error, consectetur et ad blanditiis minima
+						reiciendis voluptate! Neque hic placeat consectetur iure. Vel
+						possimus rem quia! Voluptas dolorem alias quas veniam nemo,
+						dolores tempora voluptates explicabo? Magnam eveniet qui commodi
+						provident vero fugiat hic aliquam tempore voluptatum.</p>
+				</div> 
+				-->
+			</div>
+			
+			<div class="box__footer">
+				<h2>Información</h2>
+				<a>Dirección: Manuel Lecca Nro. 270</a> <a>Distrito: Chorrillos</a>
+				<a>Departamento: Lima, Perú</a> <a>Teléfono: (043)294450</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>PanaFoods</h2>
+				<a href="#">Nosotros</a> <a href="#">Productos</a> <a href="#">Sostenibilidad</a>
+				<a href="#">Contacto</a> <a href="#">PacificWeb</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>Desarrolladores</h2>
+
+				<a><i class="fa-brands fa-dev"> </i> Araujo V. Matias Nicolas</a> 
+				<a><i class="fa-solid fa-code"> </i> Angulo U. Sebastian Cesar</a> 
+				<a><i class="fa-solid fa-laptop-code"> </i>Ramirez U. Jorge Pedro </a> 
+				<a><i class="fa-solid fa-terminal"> </i> Asin R. Nadin Misael </a>
+				<a><i class="fa-brands fa-dev"> </i> Ortiz Y. Eduardo</a> 
+			</div>
+		</div>
+		<div class="box__copyright">
+			<hr>
+			<p> Todos los derechos reservados © 2022 <b>PACIFIC NATURAL FOODS.A.C.</b> </p>
+		</div>
+	</footer>
+	
+</body>
+</html>

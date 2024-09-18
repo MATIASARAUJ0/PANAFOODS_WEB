@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align: baseline;	
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	text-align:center;
+	
+}
+
+ol{
+	list-style: none;
+}
+
+.navbar a{
+	display: block;
+	padding: 23px 20px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.navbar a:hover{
+	background: #3f3f3f;
+}
+
+.headersec{
+	height: 60vh !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title{
+	margin-bottom: 40px;
+	font-size: 60px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.p{
+	margin-bottom: 40px;
+	font-size:18px;
+	color: #000000;
+	padding: 0 100px;
+}
+
+.btn{
+	display: inline-block;
+	margin-top: 15px;
+	padding: 10px 40px;
+	border: 2px solid #9c27b0;
+	color: #fff;
+	text-decoration: none;
+	background: #9c27b0;
+}
+
+.btn:hover{
+	background:none;
+}
+
+.btn-home a{
+	margin: 0 10px;
+}
+
+.content{
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sau{
+	padding: 30px;
+	background-size: cover;
+	background-image: url("/images/backgroundvision.jpg");
+	background-attachment: fixed;
+}
+
+.box-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.box-container .box{
+	height: 11rem;
+	width: 17rem;
+	background: #101010;
+	text-align: center;
+	border-radius: 1rem;
+	box-shadow: 0 .3rem 5rem rgba(0, 0, 0, .5);
+	margin: 2rem;
+}
+
+.box-container .box i{
+	height: 3rem;
+	width: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	border-radius: 50%;
+	color: #fff;
+	background: #9c27b0;
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+
+.box-container .box h3{
+	font-size: 20px;
+	color: #9c27b0;
+}
+
+.box__footer .terms{
+	max-width: 350px;
+	margin-top: 20px;
+	font-weight: 500;
+	color: #7a7a7a;
+	font-size: 18px;
+}
+
+.about{
+	background-image: url("/images/backgroundmision.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.price{
+	background-image: url("/images/backgroundres.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	text-align: center;
+}
+ 
+.black{
+	color: #fff;
+}
+
+.contact{
+	background-image: url("/images/backgroundactualidad.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	padding-bottom: 0;
+}
+
+@media (max-width: 768px){
+	.title{
+		margin-bottom:0;
+		font-size: 40px;	
+	}
+	
+	.sau{
+		height: 100vh;
+	} 
+}

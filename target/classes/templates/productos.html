@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Productos - Panafoods</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+<link rel="shortcut icon" href="/images/icon.ico"></link>
+<script src="https://kit.fontawesome.com/306152c8ba.js"
+	crossorigin="anonymous"></script>
+<script defer th:src="@{/js/index.js}"></script>
+</head>
+<style>
+	body{
+		background-image: url("/images/backgroundprod.jpg");
+		background-size: 100% 100vh;
+		background-attachment: fixed;
+	}
+</style>
+<body>
+	<div class="body">
+		<header class="header">
+			<nav class="nav">
+				<img class="logo" th:src="@{/images/Logo.jpg}" align="top"></img>
+				<button class="nav-toggle">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<ul class="nav-menu">
+					<li class="nav-menu-item"><a href="nosotros"
+						class="nav-menu-link nav-link">Nosotros</a></li>
+					<li class="nav-menu-item"><a href="productos"
+						class="nav-menu-link nav-link nav-menu-link_active">Productos</a></li>
+					<li class="nav-menu-item"><a href="sostenibilidad"
+						class="nav-menu-link nav-link">Sostenibilidad</a></li>
+					<li class="nav-menu-item"><a href="contacto"
+						class="nav-menu-link nav-link">Contacto</a></li>
+					<li class="nav-menu-item"><a href="intranet"
+						class="nav-menu-link nav-link">PacificWeb</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="card">
+				<figure>
+					<img th:src="@{/images/harina.jpg}" width="300"></img>
+				</figure>
+				<div class="contenido">
+					<h3>Harina de pescado</h3>
+					<p>Producimos harina de pescado con altos estandares en calidad
+						y con alto valor nutricional (gran concentración de protenínas de
+						alta calidad, gran aporte en Omega-3, DHA Y EP). Nuetra harina es
+						producida con excelente calidad para satisfacer a nuestros
+						clientes y mercados como el de alimentación animal.</p>
+				</div>
+			</div>
+			<div class="card">
+				<figure>
+					<img th:src="@{/images/aceite.jpg}" width="300"></img>
+				</figure>
+				<div class="contenido">
+					<h3>Aceite de pescado</h3>
+					<p>El aceite de pescado es parte fundamental de la industria
+						nutraceutica y farmaceutica debido a su alto contenido de EPA,
+						DHA, Omega-3 y ácidos grasos indispensables para la elaboración de
+						suplementos nutricionales enriquecidos, tambien el adecuado
+						funcionamiento del cerebro.</p>
+				</div>
+			</div>
+			<div class="card">
+				<figure>
+					<img th:src="@{/images/congelados.jpg}" width="300"></img>
+				</figure>
+				<div class="contenido">
+					<h3>Congelados</h3>
+					<p>Garantía en la preservación de los productos marinos con una
+						adecuada cadena de frio desde la captura hasta la entrega. Damos
+						atención a mercados en el interior y exterior del país. Las
+						especies que ponemos a disposición de los clientes son jurel,
+						caballa, pejerrey, perico, pota, anchoveta y calamar.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container__footer">
+			<div class="box__footer">
+				<div class="logo">
+					<img th:src="@{/images/logo.jpg}" alt="">
+				</div>
+				<!--  
+				<div class="terms">
+					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Tenetur quam illum earum ut! Itaque sit neque quas dolor quasi
+						facilis quod impedit error, consectetur et ad blanditiis minima
+						reiciendis voluptate! Neque hic placeat consectetur iure. Vel
+						possimus rem quia! Voluptas dolorem alias quas veniam nemo,
+						dolores tempora voluptates explicabo? Magnam eveniet qui commodi
+						provident vero fugiat hic aliquam tempore voluptatum.</p>
+				</div> 
+				-->
+			</div>
+			<div class="box__footer">
+				<h2>Información</h2>
+				<a>Dirección: Manuel Lecca Nro. 270</a>
+				<a>Distrito: Chorrillos</a>
+				<a>Departamento: Lima, Perú</a>
+				<a>Teléfono: (043)294450</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>PanaFoods</h2>
+				<a href="#">Nosotros</a> 
+				<a href="#">Productos</a> 
+				<a href="#">Sostenibilidad</a> 
+				<a href="#">Contacto</a>
+				<a href="#">PacificWeb</a>
+			</div>
+
+			<div class="box__footer">
+				<h2>Desarrolladores</h2>
+				
+				<a><i class="fa-brands fa-dev">
+				</i> Araujo V. Matias Nicolas</a>
+				 
+				<a><i class="fa-solid fa-code">
+				</i> Angulo U. Sebastian Cesar</a> 
+				
+				<a><i class="fa-solid fa-laptop-code">
+				</i>Ramirez U. Jorge Pedro</a> 
+				
+				<a><i class="fa-solid fa-terminal">
+				</i> Asin R. Nadin Misael</a>
+			</div>
+		</div>
+		<div class="box__copyright">
+			<hr>
+			<p>Todos los derechos reservados © 2022 <b>PACIFIC NATURAL FOODS S.A.C.</b></p>
+		</div>
+	</footer>
+</body>
+</html>
